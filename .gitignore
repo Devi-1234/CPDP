@@ -47,9 +47,11 @@ logs/
 .DS_Store
 Thumbs.db
 
-# Project specific
-backend/datasets/
-backend/upload/
+# Project specific - ignore contents but not folders
+backend/datasets/*
+!backend/datasets/.gitkeep
+backend/upload/*
+!backend/upload/.gitkeep
 *.csv
 *.xlsx
 *.xls
