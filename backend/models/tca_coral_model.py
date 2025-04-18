@@ -151,7 +151,7 @@ def run_tca_coral(source_files, target_filename, test_filename, data_path, ml_mo
             n_jobs=-1
         ),
         "LogisticRegression": LogisticRegression(
-            max_iter=3000,
+            max_iter=2000,
             class_weight={0: 1, 1: 4},  # Matched class weights
             solver='saga',
             random_state=42,

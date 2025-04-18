@@ -1,0 +1,343 @@
+/* Global Styles */
+body {
+  background-color: #f0f2f5;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://www.transparenttextures.com/patterns/cubes.png');
+  opacity: 0.1;
+}
+
+.hero-section h1 {
+  color: white;
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 1s ease-in 0.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Feature Cards */
+.feature-card {
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background: white;
+}
+
+.feature-card.active {
+  border: 2px solid #667eea;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f7ff 100%);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature-image {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.feature-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-image img {
+  transform: scale(1.1);
+}
+
+/* Modern card styling */
+.info-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  margin: 2rem 0;
+}
+
+.info-card .card-body {
+  padding: 3rem;
+  position: relative;
+}
+
+/* Remove the overlay since we're using gradients */
+.card-overlay {
+  display: none;
+}
+
+/* Text styling */
+.card-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #fff, #e2e8f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-text {
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* List items styling */
+.list-group-item {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  color: #e2e8f0 !important;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(10px);
+}
+
+.list-group-item i {
+  color: #63b3ed;
+  font-size: 1.2rem;
+}
+
+.list-group-item strong {
+  color: #90cdf4;
+  margin-right: 0.5rem;
+}
+
+/* Section headers */
+.guidelines-section h4 {
+  color: #90cdf4;
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(144, 205, 244, 0.3);
+}
+
+/* Button styling */
+.btn-primary, .btn-light {
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  background: #63b3ed;
+  color: #1a365d;
+}
+
+.btn-primary:hover, .btn-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 179, 237, 0.3);
+  background: #90cdf4;
+}
+
+/* Hover effect for cards */
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Add decorative elements */
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(144, 205, 244, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.info-card::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -30%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(99, 179, 237, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* Features Section Background */
+.features-section {
+  background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+  padding: 4rem 0;
+  position: relative;
+}
+
+.features-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://www.transparenttextures.com/patterns/circles.png');
+  opacity: 0.4;
+}
+
+/* Add these styles to your existing CSS */
+.guidelines-section {
+  padding: 1rem 0;
+}
+
+.list-group-item {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+}
+
+.list-group-item i {
+  color: #667eea;
+}
+
+.list-group-item strong {
+  color: #4a5568;
+  margin-right: 0.5rem;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+/* Add or update these styles */
+.card-body {
+  padding: 2rem;  /* Increased overall padding */
+}
+
+.list-group-item {
+  padding: 0.75rem 1.5rem;  /* Increased horizontal padding for list items */
+}
+
+.info-card {
+  margin: 0 1rem;  /* Added horizontal margin */
+}
+
+/* Add these new styles */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+  z-index: 1;
+}
+
+.info-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.info-card .card-body {
+  position: relative;
+  z-index: 2;
+}
+
+.info-card h2,
+.info-card p,
+.info-card .list-group-item {
+  color: white;
+}
+
+.info-card .list-group-item {
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.info-card .list-group-item i {
+  color: #fff;
+}
+
+.info-card .list-group-item strong {
+  color: #fff;
+}
+
+.guidelines-section h4 {
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.info-card:hover .card-overlay {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%);
+}
+
+/* Update button styles */
+.btn-primary {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.btn-primary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+} 

@@ -58,7 +58,7 @@ def run_hissn(source_files, target_filename, test_filename, data_path, ml_model)
         ),
         "LogisticRegression": LogisticRegression(
             C=1.0,
-            max_iter=500,
+            max_iter=2000,
             random_state=42,
             n_jobs=-1
         ),
